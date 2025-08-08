@@ -1,98 +1,67 @@
-/* Базовые стили */
+/* Общие стили */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 10px;
+    padding: 15px;
     background: #f5f5f5;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Фильтры */
-.filters {
-    display: flex;
-    gap: 10px;
-    margin: 15px 0;
-}
-
-.filter-btn {
-    background: #0088cc;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.filter-btn.active {
-    background: #005f8c;
+header {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 /* Карточки товаров */
 .products {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
 }
 
 .product {
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 8px;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .product img {
     width: 100%;
-    border-radius: 5px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
 .product h3 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+}
+
+.product p {
+    color: #666;
     margin: 5px 0;
 }
 
 .product .price {
     font-weight: bold;
-    color: #0088cc;
-
-}
-/* Стили галереи */
-.gallery {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  margin-bottom: 10px;
+    color: #333;
+    font-size: 20px;
+    margin: 10px 0;
 }
 
-.gallery-container {
-  display: flex;
-  transition: transform 0.3s ease;
-}
-
-.gallery img {
-  width: 100%;
-  flex-shrink: 0;
-  object-fit: cover;
-}
-
-.gallery-dots {
-  text-align: center;
-  margin-top: 8px;
-}
-
-.dot {
-  cursor: pointer;
-  margin: 0 3px;
-  color: #ccc;
-  font-size: 24px;
-}
-
-.dot.active {
-  color: #0088cc;
+.btn {
+    background: #0088cc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
 }
