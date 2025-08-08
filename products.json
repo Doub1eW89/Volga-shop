@@ -1,1 +1,22 @@
-
+[
+    {
+        "id": 1,
+        "name": "Кошелек Minimalist",
+        "category": "Кошельки",
+        "description": "Размер: 9x11 см. Кожа: гальванизированная.",
+        "priceReady": 12000,
+        "priceCustom": 15000,
+        "images": ["wallet_black.jpg", "wallet_brown.jpg"],
+        "inStock": true
+    },
+    {
+        "id": 2,
+        "name": "Рюкзак Urban",
+        "category": "Рюкзаки",
+        "description": "Размер: 30x40 см. Натуральная кожа.",
+        "priceReady": 25000,
+        "priceCustom": 28000,
+        "images": ["backpack_front.jpg", "backpack_side.jpg"],
+        "inStock": false
+    }
+]
