@@ -1,3 +1,22 @@
+console.log("Script loaded!"); // Должно появиться в консоли
+
+async function loadProducts() {
+    console.log("Fetching products...");
+    try {
+        const response = await fetch('products.json');
+        console.log("Response status:", response.status);
+        
+        const text = await response.text();
+        console.log("Raw JSON:", text); // Проверьте содержимое
+        
+        const products = JSON.parse(text);
+        console.log("Parsed products:", products);
+        
+        renderProducts(products);
+    } catch (error) {
+        console.error("Full error:", error);
+    }
+}
 [
     {
         "id": 1,
