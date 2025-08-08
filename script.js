@@ -11,7 +11,8 @@ function renderProducts(products) {
     const grid = document.querySelector('.products-grid');
     grid.innerHTML = products.map(product => `
         <div class="product-card" data-category="${product.category}">
-            <div class="product-image">
+            <!-- Добавляем блок для фото -->
+            <div class="product-images">
                 ${product.images.map(img => `
                     <img src="assets/photos/${img}" alt="${product.name}">
                 `).join('')}
