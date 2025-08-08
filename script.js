@@ -26,5 +26,42 @@ function renderProducts(products) {
     `).join('');
 }
 
+// Слайдер для галерей
+function initSliders() {
+  document.querySelectorAll('.gallery').forEach(gallery => {
+    const container = gallery.querySelector('.gallery-container');
+    const dots = gallery.querySelectorAll('.dot');
+    let currentIndex = 0;
+    
+    // Переключение по точкам
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateSlider();
+      });
+    });
+    
+    function updateSlider() {
+      container.style.transform = `translateX(-${currentIndex * 100}%)`;
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[currentIndex].classList.add('active');
+    }
+    
+    // Автопереключение (опционально)
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % dots.length;
+      updateSlider();
+    }, 3000);
+  });
+}
+
+// Обновляем вызов в loadProducts
+async function loadProducts() {
+  const response = await fetch('products.json');
+  const products = await response.json();
+  renderProducts(products);
+  initSliders(); // Инициализируем слайдеры
+}
+
 // Запуск при загрузке страницы
 document.addEventListener('DOMContentLoaded', loadProducts);
