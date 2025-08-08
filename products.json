@@ -4,7 +4,7 @@
         "name": "TEST ITEM",
         "description": "Тестовый товар",
         "price": 1000,
-        "image": "backpack.jpg",
+        "image": "wallet_black.jpg",
         "inStock": true
     }
 ]
