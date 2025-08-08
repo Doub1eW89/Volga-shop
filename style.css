@@ -60,4 +60,39 @@ body {
 .product .price {
     font-weight: bold;
     color: #0088cc;
+
+}
+/* Стили галереи */
+.gallery {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.gallery-container {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.gallery img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.gallery-dots {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.dot {
+  cursor: pointer;
+  margin: 0 3px;
+  color: #ccc;
+  font-size: 24px;
+}
+
+.dot.active {
+  color: #0088cc;
 }
